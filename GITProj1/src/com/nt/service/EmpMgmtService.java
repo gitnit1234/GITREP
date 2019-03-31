@@ -16,8 +16,14 @@ public class EmpMgmtService {
 		return  count+10;
 	}
 	
+
 	public  List<String>  getEmployeeAddresses(){
 		return new ArrayList();
+}
+
+		public  boolean  isAuthenticated() {
+		return true;
+
 	}
 
 }
