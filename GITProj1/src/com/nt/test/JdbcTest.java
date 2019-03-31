@@ -1,6 +1,7 @@
 package com.nt.test;
 
 import java.sql.SQLException;
+import java.util.Date;
 
 import com.nt.dao.EmpDAO;
 import com.nt.service.EmpMgmtService;
@@ -18,6 +19,7 @@ public class JdbcTest {
 			System.out.println("Emps count::"+count);
 			int maxSal=dao.getMaxSal();
 			System.out.println("Emps Max Sal::"+maxSal);
+			System.out.println("date and time"+new Date());
 		}
 		catch(SQLException se) {
 			se.printStackTrace();
