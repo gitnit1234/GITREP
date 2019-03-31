@@ -8,7 +8,7 @@ public class JdbcUtil {
 	
 	public     static Connection  getConnection(String url,String user,String pwd)throws SQLException{
 		
-	return  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system", "manager");
+	return  DriverManager.getConnection(url,user, pwd);
 	}
 	
 }
