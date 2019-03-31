@@ -16,7 +16,7 @@ public class EmpDAO {
 		//get Connection 
 		con=JdbcUtil.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","manager");
 		ps=con.prepareStatement("SELECT COUNT(*) FROM EMP");
-		rs=ps.executeQuery();
+		rs=ps.executeQuery();///45677
 		rs.next();
 		return rs.getInt(1);
 	}
