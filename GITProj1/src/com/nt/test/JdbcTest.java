@@ -3,14 +3,18 @@ package com.nt.test;
 import java.sql.SQLException;
 
 import com.nt.dao.EmpDAO;
+import com.nt.service.EmpMgmtService;
 
 public class JdbcTest {
 
 	public static void main(String[] args) {
 		EmpDAO dao=null;
 		dao=new EmpDAO();
+		EmpMgmtService service=null;
+		int count=0;
 		try {
-			int count=dao.getEmpsCount();
+			service=new EmpMgmtService();
+			count=service.getEmpsCount();
 			System.out.println("Emps count::"+count);
 			int maxSal=dao.getMaxSal();
 			System.out.println("Emps Max Sal::"+maxSal);
