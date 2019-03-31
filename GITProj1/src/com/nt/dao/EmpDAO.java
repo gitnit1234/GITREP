@@ -20,5 +20,17 @@ public class EmpDAO {
 		rs.next();
 		return rs.getInt(1);
 	}
+	
+	public   int   getMaxSal() throws Exception{
+		Connection con=null;
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		//get Connection 
+		con=JdbcUtil.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","manager");
+		ps=con.prepareStatement("SELECT MAX(SAL) FROM EMP");
+		rs=ps.executeQuery();
+		rs.next();
+		return rs.getInt(1);
+	}
 
 }
