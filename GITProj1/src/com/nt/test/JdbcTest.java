@@ -22,7 +22,7 @@ public class JdbcTest {
 			e.printStackTrace();
 		}
 		
-		
+		//12345
 
 	}//main
 }//class
